@@ -1,31 +1,20 @@
 # LGTV2
-
+<!---
 [![NPM version](https://badge.fury.io/js/lgtv2.svg)](http://badge.fury.io/js/lgtv2)
 [![npm](https://img.shields.io/npm/dt/lgtv2.svg)]()
 [![dependencies Status](https://david-dm.org/hobbyquaker/lgtv2/status.svg)](https://david-dm.org/hobbyquaker/lgtv2)
 [![Build Status](https://travis-ci.org/hobbyquaker/lgtv2.svg?branch=master)](https://travis-ci.org/hobbyquaker/lgtv2)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+-->
 [![License][mit-badge]][mit-url]
 
-Simple Node.js module to remote control LG WebOS smart TVs.
+Simple Node.js module to remote control LG WebOS smart TVs (with SSL support).
 
-> this is a fork of [LGTV.js](https://github.com/msloth/lgtv.js), heavily modified and rewritten to suite my needs.
-
-With __v1.4.0__ the location and filename of the keyFile is changed, so you likely will have to accept the connection on 
-your TV again after upgrading to 1.4.0.
-
-
-## Projects using this Module
-
-* [node-red-contrib-lgtv](https://github.com/hobbyquaker/node-red-contrib-lgtv) - [Node-RED](https://nodered.org/) Nodes to control LG webOS Smart TVs.
-* [lgtv2mqtt](https://github.com/hobbyquaker/lgtv2mqtt) - Interface between LG WebOS Smart TVs and MQTT.
-* [homebridge-webos-tv](https://github.com/merdok/homebridge-webos-tv) - [Homebridge](https://github.com/nfarina/homebridge) plugin for LG WebOS TVs.
-* [ioBroker.lgtv](https://github.com/SebastianSchultz/ioBroker.lgtv) - LG WebOS SmartTV adapter for [ioBroker](http://iobroker.net/).
-
+> this is a fork of [LGTV2.js](https://github.com/hobbyquaker/lgtv2) with added support for SSL connections to WebOS TVs.
 
 ## Installation
 
-`npm install lgtv2`
+`npm install lgtv2s`
 
 ## TV configuration
 
@@ -37,7 +26,7 @@ You need to allow "LG Connect Apps" on your TV - see http://www.lg.com/uk/suppor
 Subscribe to volume and mute changes and output to console:
 ```javascript
 
-var lgtv = require("lgtv2")({
+var lgtv = require("lgtv2s")({
     url: 'ws://lgwebostv:3000'
 });
 
@@ -59,7 +48,7 @@ lgtv.on('connect', function () {
 Turn TV off:
 ```javascript
 
-var lgtv = require("lgtv2")({
+var lgtv = require("lgtv2s")({
     url: 'ws://lgwebostv:3000'
 });
 
